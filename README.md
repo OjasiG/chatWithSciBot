@@ -1,5 +1,5 @@
-#chatWithSciBot
 
+##Team Name: BroCode_chatWithSciBot
 ## Introduction
 ------------
 SciBot is a Python application that allows you to chat with multiple documents in multiple formats. You can ask questions about the documents using natural language, and the application will provide relevant responses based on the content of the documents. This app utilizes a language model to generate accurate answers to your queries. It supports PDFs, PowerPoint presentations, DOCX files, TXT files, LaTeX files, CSV files, Excel files, and PNG images.Please note that the app will only respond to questions related to the loaded documents.
