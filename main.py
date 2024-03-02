@@ -33,7 +33,7 @@ from langchain.chains import ConversationalRetrievalChain
 
 
 
-GOOGLE_API_KEY= "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"
+GOOGLE_API_KEY= "yourOPENAIAPIKEY"
 load_dotenv()
 os.getenv("GOOGLE_API_KEY")
 genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
@@ -94,7 +94,7 @@ def get_text_chunks(text):
 
 def get_vectorstore(text_chunks):
     #embeddings = OpenAIEmbeddings()
-    embeddings = OpenAIEmbeddings(openai_api_key="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")
+    embeddings = OpenAIEmbeddings(openai_api_key="yourOPENAIKEY")
 
     # embeddings = HuggingFaceInstructEmbeddings(model_name="hkunlp/instructor-xl")
     vectorstore = FAISS.from_texts(texts=text_chunks, embedding=embeddings)
@@ -103,7 +103,7 @@ def get_vectorstore(text_chunks):
 
 def get_conversation_chain(vectorstore):
     #llm = ChatOpenAI()
-    llm = ChatOpenAI(openai_api_key="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")
+    llm = ChatOpenAI(openai_api_key="yourOPENAIKEY")
 
     # llm = HuggingFaceHub(repo_id="google/flan-t5-xxl", model_kwargs={"temperature":0.5, "max_length":512})
 
