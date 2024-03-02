@@ -11,15 +11,36 @@ SciBot is a Python application that allows you to chat with multiple documents i
 
 The application follows these steps to provide responses to your questions:
 
-1. Document Loading: The SciBot reads multiple documents and extracts their text content.
+1. *Text Extraction from Documents*:
+   - Extracts text from different types of documents using various libraries like pdfplumber, pytesseract, openpyxl, etc.
 
-2. Text Chunking: The extracted text is divided into smaller chunks that can be processed effectively.
+2. *Text Processing*:
+   - Splits extracted text into smaller chunks for better processing.
 
-3. Language Model: The application utilizes an OpenAI GPT large language model(LLM) to generate vector representations (embeddings) of the text chunks.
+3. *Embedding and Vectorization*:
+   - Utilizes embedding models like Google Generative AI Embeddings to convert text chunks into vector representations.
+   - Uses FAISS library for efficient vector indexing and similarity search.
 
-4. Similarity Matching: When you ask a question, the SciBot compares it with the text chunks and identifies the most semantically similar ones.
+4. *Conversational AI Setup*:
+   - Configures a conversational AI system using models like Google Generative AI to generate responses to user queries.
+   - Implements retrieval augmented generation for contextual learning, enhancing the AI's ability to provide contextually relevant responses.
 
-5. Response Generation: The selected chunks are passed to the language model, which generates a response based on the relevant content of the documents.
+5. *User Interaction*:
+   - Provides a web interface for users to ask questions and receive responses from the conversational AI system.
+   - Supports uploading various document types for processing.
+
+6. *Document Processing*:
+   - Processes uploaded documents to extract text and feed it into the conversational AI system.
+   - Supports PDFs, PowerPoint presentations, DOCX files, TXT files, LaTeX files, CSV files, Excel files, and PNG images.
+
+7. *Integration with Conversational Chain*:
+   - Integrates the conversational AI system with a conversational retrieval chain to handle user queries effectively.
+
+8. *User Input Handling*:
+   - Handles user input questions and provides responses using the configured conversational chain.
+
+9. *Web Interface*:
+    - Provides a user-friendly web interface using Streamlit for easy interaction with SciBot.
 
 ## Dependencies and Installation
 ----------------------------
